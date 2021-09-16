@@ -1,0 +1,28 @@
+.card__items {
+	list-style-type: none;
+	padding: 0;
+	display: grid;
+  	margin: 0  auto;
+  	justify-content: center;
+  	grid-template-columns: repeat(auto-fit, minmax(282px,1fr));
+  	gap: 17px; 
+}
+
+
+  
+  @media screen and (max-width: 894px){
+	.card__items  {
+	  max-width: 720px;
+	  grid-template-columns: repeat(auto-fit, minmax(282px,282px));
+  
+	}
+  }
+  
+  @media screen and (max-width: 720px){
+	.card__items  {
+	  margin-top: 64px;
+	  max-width: 288px;
+	  grid-template-columns: repeat(auto-fit, minmax(282px,282px));
+	}
+  }
+  

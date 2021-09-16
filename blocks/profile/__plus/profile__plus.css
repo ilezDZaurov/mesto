@@ -1,0 +1,13 @@
+.profile__plus {
+	margin: auto;
+	
+}
+
+@media screen and (max-width: 681px) {
+	.profile__plus  {
+		width: 16px;
+		height: 16px;
+
+		}
+	}
+  

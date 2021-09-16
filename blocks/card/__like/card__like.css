@@ -1,0 +1,18 @@
+.card__like {
+	margin: 0 auto;
+	margin-right: 30px;
+	cursor: pointer;
+	max-width: 22px;
+	
+}
+
+.card__like:hover {
+	opacity: 0.5;
+}
+.card__like:active{
+	background-image: url(../../../images/Union.svg);
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
