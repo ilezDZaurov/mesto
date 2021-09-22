@@ -9,7 +9,7 @@ let jobInput = formElement.querySelector('.popup__input_type_job'); // Восп�
 
 
 function popupToggle() {
-	popup.classList.toggle('popup_value_opened');
+	popup.classList.toggle('popup_opened');
 }
 
 
