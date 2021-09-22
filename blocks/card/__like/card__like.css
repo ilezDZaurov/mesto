@@ -1,8 +1,13 @@
 .card__like {
 	margin: 0 auto;
 	margin-right: 30px;
+	margin-top: 30px;
+	background-image: url(../../../images/Vector4.svg) ;
+	background-size: cover;
 	cursor: pointer;
-	max-width: 22px;
+	width: 22px;
+	height: 19px;
+	border: none;
 	
 }
 

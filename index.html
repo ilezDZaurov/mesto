@@ -17,81 +17,77 @@
 		<section class="profile page__profile">
 			<img class="profile__image" src="images/image.jpg" alt="Жак-Ив Кусто">
 			<div class="profile__info">
-				<div class="profile__content"> 
+				<div class="profile__content">
 					<h1 class="profile__title">Жак-Ив Кусто</h1>
 					<p class="profile__text">Исследователь океана</p>
 				</div>
-				<div class="profile__button">
-					<img class="profile__pen" src="images/Vector2.svg" alt="Редактировать">
-				</div>
+				<button type="button" class="profile__button"></button>
 			</div>
-			<div class="profile__add">
-				<img class="profile__plus"  src="images/Vector3.svg" alt="Редактировать">
-			</div>
+			<button type="button" class="profile__add"></button>
 		</section>
-		<section class="card" >
+		<section class="card">
 			<ul class="card__items">
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin6.jpg" alt="Карачаевск">
 					<div class="card__info">
 						<h2 class="card__name">Карачаевск</h2>
-						<img aria-label="hidden" class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like"></button>
 					</div>
 				</li>
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin2.jpg" alt="Гора Эльбрус">
 					<div class="card__info">
 						<h2 class="card__name">Гора Эльбрус</h2>
-						<img class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like"></button>
 					</div>
 				</li>
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin3.jpg" alt="Домбай">
 					<div class="card__info">
 						<h2 class="card__name">Домбай</h2>
-						<img class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like"></button>
 					</div>
 				</li>
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin4.jpg" alt="Гора Эльбрус">
 					<div class="card__info">
 						<h2 class="card__name">Гора Эльбрус</h2>
-						<img class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like"></button>
 					</div>
 				</li>
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin5.jpg" alt="Домбай">
 					<div class="card__info">
 						<h2 class="card__name">Домбай</h2>
-						<img class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like"></button>
 					</div>
 				</li>
 				<li class="card__item">
 					<img class="card__image" src="images/kirill-pershin6.jpg" alt="Карачаево-Ч...">
 					<div class="card__info">
 						<h2 class="card__name">Карачаево-Черкессия</h2>
-						<img class="card__like" src="images/Vector4.svg" alt="Лайк">
+						<button type="button" class="card__like" >
 					</div>
 				</li>
 			</ul>
 		</section>
 		<footer class="footer page__footer ">
-			<h1 class="footer__copyright">&copy; 2020 Mesto Russia</h1>
+			<p class="footer__copyright">&copy; 2020 Mesto Russia</p>
 		</footer>
 	</div>
-	<section class="popup">
-		<form class="popup__container" action="#">
+	<article class="popup">
+		<form class="popup__container" name="popupForm" action="#">
 			<button type="button" class="popup__close"></button>
 			<div class="popup__content">
 				<h2 class="popup__title"> Редактировать профиль</h2>
-				<input class="popup__input popup__nameInput" type="text" />
+				<input class="popup__input  popup__input_type_name" type="text" />
 				<div class="popup__line"></div>
-				<input  class="popup__input popup__jobInput" type="text" />
+				<input class="popup__input  popup__input_type_job" type="text" />
 				<div class="popup__line"></div>
-				<input class="popup__button" value="Сохранить" type="submit" />
+				<button class="popup__button" type="submit">Сохранить</button>
 			</div>
 		</form>
-	</section>
+	</article>
 	<script src="./scripts/index.js"></script>
 </body>
 

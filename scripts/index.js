@@ -4,21 +4,19 @@ const popupCloseBtn = popup.querySelector('.popup__close');
 const leadName = document.querySelector('.profile__title');
 const leadJob = document.querySelector('.profile__text');
 let formElement = popup.querySelector('.popup__container'); // Воспользуйтесь методом querySelector()
-let nameInput = formElement.querySelector('.popup__nameInput'); // Воспользуйтесь инструментом .querySelector()
-let jobInput = formElement.querySelector('.popup__jobInput'); // Воспользуйтесь инструментом .querySelector()
+let nameInput = formElement.querySelector('.popup__input_type_name'); // Воспользуйтесь инструментом .querySelector()
+let jobInput = formElement.querySelector('.popup__input_type_job'); // Воспользуйтесь инструментом .querySelector()
 
 
 function popupToggle() {
-	popup.classList.toggle('popup__opened');
-}
-
-function popupClose() {
-	popup.classList.toggle('popup__opened' ,setPopupInputValue());
+	popup.classList.toggle('popup_value_opened');
 }
 
 
-popupOpenBtn.addEventListener('click', popupToggle, setPopupInputValue());
-popupCloseBtn.addEventListener('click' , popupClose);
+
+
+popupOpenBtn.addEventListener('click', setPopupInputValue);
+popupCloseBtn.addEventListener('click', popupToggle);
 
 
 
@@ -27,17 +25,18 @@ popupCloseBtn.addEventListener('click' , popupClose);
 function setPopupInputValue() {
 	nameInput.value = leadName.textContent.trim();
 	jobInput.value = leadJob.textContent.trim();
+	popupToggle();
 }
 function setTextInputValue() {
 	leadName.textContent = nameInput.value;
 	leadJob.textContent = jobInput.value;
+	popupToggle();
 }
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
 function formSubmitHandler(evt) {
 	evt.preventDefault();
 	setTextInputValue();
-	popupToggle();
 
 }
 
