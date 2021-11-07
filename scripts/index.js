@@ -1,4 +1,4 @@
-const popup = document.querySelector('.popup__form');
+const popup = document.querySelector('.form-profile');
 const popupOpenBtn = document.querySelector('.profile__button');
 const popupCloseBtn = popup.querySelector('.popup__close-form');
 const leadName = document.querySelector('.profile__title');
@@ -7,7 +7,7 @@ const formElement = popup.querySelector('.popup__container-profile');
 const nameInput = formElement.querySelector('.popup__input_type_name'); 
 const jobInput = formElement.querySelector('.popup__input_type_job'); 
 
-const popupAdd = document.querySelector('.popup__add');
+const popupAdd = document.querySelector('.add-image');
 const popupFormAdd = document.querySelector('.popup__container-add');
 const popupOpenAdd = document.querySelector('.profile__add');
 const popupCloseAdd = popupAdd.querySelector('.popup__close-add');
@@ -18,7 +18,7 @@ const addTemplate = document.querySelector('.card-template');
 
 
 
-const popupImgs = document.querySelector('.popup__images');
+const popupImgs = document.querySelector('.images-expand');
 const popupImg = document.querySelector('.popup__image');
 const popupImgName = document.querySelector('.popup__image-title');
 const popupCloseImg = document.querySelector('.popup__close-img');
