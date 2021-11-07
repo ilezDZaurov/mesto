@@ -104,7 +104,7 @@ function cardAdd(item) {
 	addElement.querySelector('.card__image').src = item.link;
 	addElement.querySelector('.card__image').alt = item.name;
 	addElement.querySelector('.card__like').addEventListener('click', like);
-	addElement.querySelector('.card__image ').addEventListener('click', openPhoto);
+	addElement.querySelector('.card__image ').addEventListener('click', openImg);
     addElement.querySelector('.card__delete').addEventListener('click', cardDel);
 	return addElement;
   }
@@ -149,7 +149,7 @@ popupImg.addEventListener('click',  popupToggleImg);
 
   
   
-  function openPhoto (evt) {
+  function openImg (evt) {
 	popupToggleImg(popupImgs);
 	popupImg.src = evt.target.src;
 	popupImg.alt = evt.currentTarget.alt;
