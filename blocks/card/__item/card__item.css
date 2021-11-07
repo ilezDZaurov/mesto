@@ -1,5 +1,6 @@
 .card__item {
-	max-width: 100%;
+	max-width: 282px;
 	object-fit: cover;
+	position: relative;
 	
 }

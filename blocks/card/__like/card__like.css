@@ -9,15 +9,9 @@
 	height: 19px;
 	border: none;
 	
+	
 }
 
 .card__like:hover {
 	opacity: 0.5;
-}
-.card__like:active{
-	background-image: url(../../../images/Union.svg);
-	opacity: 1;
-	background-repeat: no-repeat;
-	background-position: center;
-	
 }
