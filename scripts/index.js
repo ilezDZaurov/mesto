@@ -54,8 +54,7 @@ const popupCloseImg = document.querySelector('.popup__close-img');
 
 function openPopup(popup) {
 	popup.classList.add('popup_opened');
-	nameInput.value = leadName.textContent.trim();
-	jobInput.value = leadJob.textContent.trim();
+	
   }
   
   function closePopup(popup) {
