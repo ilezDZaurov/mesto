@@ -26,7 +26,7 @@ const initialCards = [
 	}
 ];
 
-const popup = document.querySelector('.popup');
+
 const profilePopup = document.querySelector('.form-profile');
 const popupOpenBtn = document.querySelector('.profile__button');
 const popupCloseBtn = profilePopup.querySelector('.popup__close-form');
@@ -63,6 +63,12 @@ function openPopup(popup) {
 	
   }
   
+  function openPopupProfile() {
+	nameInput.value = leadName.textContent.trim();
+	jobInput.value = leadJob.textContent.trim();
+	openPopup(profilePopup);
+  }
+
 function submitProfileForm(evt) {
 	evt.preventDefault();
 	leadName.textContent = nameInput.value;
@@ -70,7 +76,7 @@ function submitProfileForm(evt) {
 	closePopup(profilePopup);
 }
 
-function cardAdd(item) {
+function createCard(item) {
 	const addElement = addTemplate.content.cloneNode(true);
 	addElement.querySelector('.card__name').textContent = item.name;
 	addElement.querySelector('.card__image').src = item.link;
@@ -84,7 +90,7 @@ function cardAdd(item) {
 initialCards.map(renderElements); 
 
 function renderElements(item) { 
-  const addElement = cardAdd(item);
+  const addElement = createCard(item);
   cardItems.prepend(addElement); 
  
   
@@ -130,7 +136,7 @@ profileFormElement.addEventListener('submit', submitProfileForm);
 popupOpenAdd.addEventListener('click', () => openPopup(popupAdd));
 popupCloseAdd.addEventListener('click', () => closePopup(popupAdd));
 
-popupOpenBtn.addEventListener('click', () => openPopup(profilePopup));
+popupOpenBtn.addEventListener('click', () => openPopupProfile(profilePopup));
 popupCloseBtn.addEventListener('click', () => closePopup(profilePopup));
 
 popupImg.addEventListener('click',  () => openPopup(popupImgs));
