@@ -33,23 +33,57 @@
 			<p class="footer__copyright">&copy; 2020 Mesto Russia</p>
 		</footer>
 		<article class="popup form-profile ">
-			<form class="popup__container popup__container-profile" name="popupForm" action="#">
+			<form class="popup__container popup__container-profile" name="popupForm" action="#" novalidate>
 				<button type="button" class="popup__close popup__close-form"></button>
 				<div class="popup__content">
 					<h2 class="popup__title"> Редактировать профиль</h2>
-					<input class="popup__input  popup__input_type_name" name="input-name" type="text" />
-					<input class="popup__input  popup__input_type_job" name="input-job" type="text" />
+					<input class="popup__input  popup__input_type_name" 
+					name="input-name" type="text" 
+					placeholder="Введите Имя"  
+					minlength="2" 
+					maxlength="40"  
+					required
+					id="name"
+					autocomplete="off"/> 
+					<span id="name-error" class="popup__error "></span>
+					<input class="popup__input  popup__input_type_job" 
+					name="input-job" 
+					type="text"
+					placeholder="О себе"  
+					minlength="2" 
+					maxlength="200"  
+					required
+					id="job"
+					autocomplete="off" />
+					<span id="job-error" class="popup__error"></span>
 					<button class="popup__button" type="submit">Сохранить</button>
 				</div>
 			</form>
 		</article>
 		<article class="popup add-image">
-			<form class="popup__container popup__container-add" name="popupForm-add" action="#">
+			<form class="popup__container popup__container-add" name="popupForm-add" action="#" novalidate>
 				<button type="button" class="popup__close popup__close-add"></button>
 				<div class="popup__content">
 					<h2 class="popup__title"> Новое место</h2>
-					<input class="popup__input  popup__input_type_place" value placeholder ="Название" name="input-place" type="text" />
-					<input class="popup__input  popup__input_type_link" value placeholder ="Ссылка на картинку" name="input-link" type="text" />
+					<input class="popup__input  popup__input_type_place" 
+					placeholder ="Название" 
+					name="input-place" type="text" 
+					minlength="2" 
+					maxlength="40"  
+					required
+					id="place"
+					autocomplete="off"/>
+					<span id="place-error" class="popup__error"></span>
+					<input class="popup__input  popup__input_type_link" 
+					placeholder ="Ссылка на картинку" 
+					name="input-link" 
+					type="url"
+					required
+					minlength="2" 
+					maxlength="200"
+					id="link"
+					autocomplete="off" />
+					<span id="link-error" class="popup__error"></span>
 					<button class="popup__button popup__button-add" type="submit">Создать</button>
 				</div>
 			</form>
@@ -72,6 +106,7 @@
 			</li>
 		</template>
 		<script src="./scripts/index.js"></script>
+		<script src="./scripts/validate.js"></script>
 	</div>	
 </body>
 

@@ -6,8 +6,10 @@
 	outline:none;
 	padding-bottom: 8px;
   	border-bottom: 1px solid rgb(0, 0, 0, 0.2);
-  	margin-bottom: 30px;
 	z-index: 100;
 	
 	 
+}
+.popup__input:last-of-type{
+	margin-top: 30px;
 }
