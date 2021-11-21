@@ -6,9 +6,9 @@ enableValidation({
     inputErrorClass: 'popup__input_state_invalid',
     errorClass: 'popup__error'
   }); 
-
-  function enableValidation (){
-      const forms = Array.from(document.querySelectorAll('.popup__container'));
+  enableValidation();
+  function enableValidation (enableValidation){
+      const forms = Array.from(document.querySelectorAll(enableValidation.formSelector));
       forms.forEach(addListenersToForm);
       
   }
@@ -32,8 +32,10 @@ enableValidation({
       const isFormInvalid = !form.checkValidity();
       button.disabled = isFormInvalid;
       button.classList.toggle('popup__button_invalid', isFormInvalid);
+      
+      
   }
-
+  
   function addListenersToInput (input){
     input.addEventListener('input', hendleFieldValidation);
   }
@@ -46,3 +48,4 @@ enableValidation({
 
   }
 
+ 

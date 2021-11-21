@@ -1,3 +1,4 @@
+
 const initialCards = [
 	{
 		name: 'Архыз',
@@ -26,10 +27,10 @@ const initialCards = [
 	}
 ];
 
-const popup = document.querySelectorAll('.popup');
+const popups = document.querySelectorAll('.popup');
 const profilePopup = document.querySelector('.form-profile');
-const popupOpenBtn = document.querySelector('.profile__button');
-const popupCloseBtn = profilePopup.querySelector('.popup__close-form');
+const openProfileButton = document.querySelector('.profile__button');
+const closeProfileButton = profilePopup.querySelector('.popup__close-form');
 const leadName = document.querySelector('.profile__title');
 const leadJob = document.querySelector('.profile__text');
 const profileFormElement = profilePopup.querySelector('.popup__container-profile'); 
@@ -52,14 +53,16 @@ const popupCloseImg = document.querySelector('.popup__close-img');
 
 
 
-function openPopup(popup) {
-	popup.classList.add('popup_opened');
+function openPopup(popups) {
+	popups.classList.add('popup_opened');
 	document.addEventListener('keydown', closeEscPopup);
+	
 	
   }
   
-  function closePopup(popup) {
-	popup.classList.remove('popup_opened');
+  function closePopup(popups) {
+	popups.classList.remove('popup_opened');
+	document.removeEventListener('keydown', closeEscPopup);
 	
   }
 
@@ -70,7 +73,7 @@ function openPopup(popup) {
 	  }
   }
 
-  popup.forEach((popup) => {
+  popups.forEach((popup) => {
 	popup.addEventListener('click', (evt) => {
 		if (evt.target.classList.contains('popup_opened')) {
 			closePopup(popup);
@@ -119,6 +122,10 @@ function newCard(evt) {
  	renderElements ({name: inputPlace, link: inputlink});
 	closePopup(popupAdd);
 	evt.currentTarget.reset();
+	disableSubmitButton();
+	
+	
+	
   }
 
 
@@ -135,7 +142,10 @@ function cardDel(evt) {
   }
 
 
-
+function disableSubmitButton (){
+	addButton.classList.add('popup__button_invalid');
+	addButton.disabled = true;
+}
   
   function openImg (evt) {
 	openPopup(popupImgs);
@@ -148,13 +158,11 @@ function cardDel(evt) {
 
 popupFormAdd.addEventListener('submit', newCard); 
 profileFormElement.addEventListener('submit', submitProfileForm);
-  
-popupOpenAdd.addEventListener('click', () => openPopup(popupAdd));
+popupOpenAdd.addEventListener('click', () => openPopup(popupAdd) );
 popupCloseAdd.addEventListener('click', () => closePopup(popupAdd));
 
-popupOpenBtn.addEventListener('click', () => openPopupProfile(profilePopup));
-popupCloseBtn.addEventListener('click', () => closePopup(profilePopup));
+openProfileButton.addEventListener('click', () => openPopupProfile(profilePopup));
+closeProfileButton.addEventListener('click', () => closePopup(profilePopup));
 
-popupImg.addEventListener('click',  () => openPopup(popupImgs));
 popupCloseImg.addEventListener('click', () => closePopup(popupImgs));
 
